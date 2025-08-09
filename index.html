@@ -624,7 +624,7 @@
         }
 
         .member-social a {
-            color: var(--text);
+            color: var(--primary);
             width: 35px;
             height: 35px;
             border-radius: 50%;
@@ -804,6 +804,54 @@
             box-shadow: 0 6px 20px rgba(255, 0, 0, 0.4);
         }
 
+        /* Live Recordings Section */
+        .live-recordings {
+            background: var(--card-bg);
+            padding: 0.1rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-top: 2em;
+        }
+
+        .live-recordings h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .live-recordings-group {
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: rgba(106, 17, 203, 0.05);
+            border-radius: 8px;
+            transition: var(--transition);
+        }
+
+        .live-recordings-group:hover {
+            background: rgba(106, 17, 203, 0.1);
+        }
+
+        .live-recordings-group h4 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .live-recordings-group a {
+            display: inline-block;
+            color: var(--secondary);
+            text-decoration: none;
+            margin-right: 1rem;
+            margin-bottom: 0.5rem;
+            transition: var(--transition);
+        }
+
+        .live-recordings-group a:hover {
+            color: var(--accent);
+            text-decoration: underline;
+        }
+
         /* Contact Section */
         .contact {
             background: var(--light);
@@ -936,7 +984,7 @@
         }
 
         .social-links a {
-            color: var(--text-light);
+            color: var(--secondary);
             background: rgba(255, 255, 255, 0.1);
             width: 40px;
             height: 40px;
@@ -948,7 +996,8 @@
         }
 
         .social-links a:hover {
-            background: var(--accent);
+            color: black;
+            background: var(--secondary);
             transform: translateY(-3px);
         }
 
@@ -1214,9 +1263,13 @@
             </div>
             <div class="about-content animate-on-scroll">
                 <h2>Our Story</h2>
-                <p>Founded in 2010, Williams Studios began as a small recording space with big dreams. What started as a passion project between friends has grown into a full-service media production studio serving clients across the country.</p>
-                <p>Our team of creative professionals brings together diverse talents from music production, photography, videography, and audio engineering to deliver exceptional results for every project.</p>
-                <p>We believe in the power of collaboration and the magic that happens when creative minds come together to bring visions to life.</p>
+                <p>Founded in 2019, Williams Studios originated as a modest recording space driven by ambitious aspirations. What commenced as a familial passion project has since evolved into a comprehensive media production studio, 
+                    catering to clients nationwide and internationally. </p>
+                <p>Our team of creative professionals is committed to enhancing the musical artistry of our clients through superior production, strategic marketing, and promotional services, while also mentoring musicians, 
+                    songwriters, producers, and engineers. We prioritize fostering creative development, empowering artists to embrace authenticity and confidence, 
+                    and facilitating their pursuit of industry success and recognition. </p>
+                <p>At Williams Studios, we are dedicated to cultivating enduring relationships and creating an environment conducive to innovation, growth, and excellence, 
+                    enabling artists to thrive and realize their full potential.</p>
                 <a href="#team" class="btn">Meet Our Team</a>
             </div>
         </div>
@@ -1232,17 +1285,17 @@
             <div class="mv-card animate-on-scroll">
                 <i class="fas fa-bullseye"></i>
                 <h3>Our Mission</h3>
-                <p>To empower artists and creators by providing state-of-the-art production facilities and expert guidance, helping them realize their creative visions with technical excellence and artistic integrity.</p>
+                <p>To empower artists, photographers, and videographers by providing a collaborative environment that nurtures talent, fosters creativity, and delivers high-quality recordings and visuals that resonate with audiences.</p>
             </div>
             <div class="mv-card animate-on-scroll">
                 <i class="fas fa-eye"></i>
                 <h3>Our Vision</h3>
-                <p>To be the most trusted and innovative media production studio, recognized for elevating creative work through cutting-edge technology, exceptional talent, and an unwavering commitment to quality.</p>
+                <p>To be a leading creative platform inspiring and capturing authentic stories through innovative music and visual artistry, enriching cultural expression worldwide.</p>
             </div>
             <div class="mv-card animate-on-scroll">
                 <i class="fas fa-heart"></i>
                 <h3>Our Values</h3>
-                <p>Creativity, Collaboration, Excellence, Integrity, Innovation. These core values guide every project we undertake and every relationship we build with our clients and partners.</p>
+                <p> Creativity, authenticity, collaboration, excellence, integrity, innovation, and cultural diversity.</p>
             </div>
         </div>
     </section>
@@ -1383,47 +1436,72 @@
                     <i class="fas fa-search-plus play-icon"></i>
                 </div>
             </div>
-            <!-- Video Items -->
-            <div class="gallery-item animate-on-scroll" onclick="openModal('https://assets.mixkit.co/videos/preview/mixkit-man-singing-under-neon-lights-1230-large.mp4', true)">
-                <video muted loop>
-                    <source src="https://assets.mixkit.co/videos/preview/mixkit-man-singing-under-neon-lights-1230-large.mp4" type="video/mp4">
-                </video>
-                <div class="video-overlay">
-                    <i class="fas fa-play play-icon"></i>
-                </div>
-            </div>
+            <!-- Video Items with YouTube -->
             <div class="gallery-item animate-on-scroll" onclick="openModal('https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80')">
                 <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="DJ Performance">
                 <div class="video-overlay">
                     <i class="fas fa-search-plus play-icon"></i>
                 </div>
             </div>
-            <div class="gallery-item animate-on-scroll" onclick="openModal('https://assets.mixkit.co/videos/preview/mixkit-band-playing-in-a-dark-night-club-1232-large.mp4', true)">
-                <video muted loop>
-                    <source src="https://assets.mixkit.co/videos/preview/mixkit-band-playing-in-a-dark-night-club-1232-large.mp4" type="video/mp4">
-                </video>
-                <div class="video-overlay">
-                    <i class="fas fa-play play-icon"></i>
+        </div>
+    </section>
+
+    <!-- Live Recordings Section -->
+    <section class="section">
+        <div class="service-items live-recordings">
+            <h3 style="margin-bottom:20px;"><i class="fab fa-youtube"></i> Live Recordings</h3>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                <!-- Left Column -->
+                <div>
+                    <div class="live-recordings-group">
+                        <h4>MEDZA</h4>
+                        <a href="https://youtu.be/YYsZkwox8Ms?si=j7Pt7eQjAj7jVsgN" target="_blank">Watch on YouTube</a>
+                    </div>
+                    <div class="live-recordings-group">
+                        <h4>NIK THE PSALMIST</h4>
+                        <a href="https://youtu.be/5N-CsLvwHfM?si=0i1fHH4ubt5bZsMk" target="_blank">Watch on YouTube</a>
+                    </div>
+                    
+                    <h3 style="margin:20px 0 10px 0;">Gospel</h3>
+                    
+                    <div class="live-recordings-group">
+                        <h4>HANNINGTONE</h4>
+                        <a href="https://youtu.be/yT8FiDC5Z8w?si=XSbJcn-sErLSIXit" target="_blank">Watch on YouTube</a>
+                    </div>
+                    <div class="live-recordings-group">
+                        <h4>ALI MUKHWANA ft HENRY THE BAND</h4>
+                        <a href="https://youtu.be/V0Zj76FHiN4?si=9sdJZOvem2Q3D6zq" target="_blank">Watch on YouTube</a>
+                    </div>
+                    <div class="live-recordings-group">
+                        <h4>FLORENEC FT GUARDIAN ANGEL</h4>
+                        <a href="https://youtu.be/OFnuoep38TY?si=k6Wy_zFQlHGeEBUB" target="_blank">Watch on YouTube</a>
+                    </div>
                 </div>
-            </div>
-            <div class="gallery-item animate-on-scroll" onclick="openModal('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80')">
-                <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Live Performance">
-                <div class="video-overlay">
-                    <i class="fas fa-search-plus play-icon"></i>
-                </div>
-            </div>
-            <div class="gallery-item animate-on-scroll" onclick="openModal('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80')">
-                <img src="https://images.unsplash.com/photo-1468164016595-6108e4c60c8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Wedding Photography">
-                <div class="video-overlay">
-                    <i class="fas fa-search-plus play-icon"></i>
-                </div>
-            </div>
-            <div class="gallery-item animate-on-scroll" onclick="openModal('https://assets.mixkit.co/videos/preview/mixkit-woman-singing-while-playing-guitar-1233-large.mp4', true)">
-                <video muted loop>
-                    <source src="https://assets.mixkit.co/videos/preview/mixkit-woman-singing-while-playing-guitar-1233-large.mp4" type="video/mp4">
-                </video>
-                <div class="video-overlay">
-                    <i class="fas fa-play play-icon"></i>
+                
+                <!-- Right Column -->
+                <div>
+                    <div class="live-recordings-group">
+                        <h4>JANET OUDU</h4>
+                        <a href="https://youtu.be/mtr8Gm7s1io?si=hKY8LzbYHqm6xFvN" target="_blank">Watch on YouTube</a>
+                    </div>
+                    <div class="live-recordings-group">
+                        <h4>ARROWBOY</h4>
+                        <a href="https://youtu.be/FY8DJOxmgH0?si=4vjHFuXUVGFof3aj" target="_blank">Watch on YouTube</a>
+                    </div>
+                    <div class="live-recordings-group">
+                        <h4>MASAUTI</h4>
+                        <a href="https://youtu.be/lDctT0kJgis?si=ATo037RPb2uCBFUx" target="_blank">Watch on YouTube</a>
+                    </div>
+                    <div class="live-recordings-group">
+                        <h4>FLORENCE ANDENYI</h4>
+                        <a href="https://youtu.be/7G0UIk89cm4?si=0Sg6Q4JAX1_hlXFC" target="_blank">Watch on YouTube</a>
+                    </div>
+                    
+                    <div class="live-recordings-group">
+                        <h4>TESLA KENYA</h4>
+                        <a href="https://youtu.be/qkLnuWgQKbI?si=QqU1SavEmyJgIcNh" target="_blank">Watch on YouTube</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1555,7 +1633,7 @@
             <h2>Our YouTube Channel</h2>
             <p>Check out some of our work on YouTube and subscribe to our channel for more content.</p>
         </div>
-        <a href="https://youtube.com/yourchannel" target="_blank" class="btn youtube-btn">
+        <a href="https://youtube.com/@officialwilliamsrecords?si=HROc-WbH38rg9fkC" target="_blank" class="btn youtube-btn">
             <i class="fab fa-youtube"></i> Visit Our YouTube
         </a>
     </section>
@@ -1571,25 +1649,25 @@
                 <h3>Let's Create Something Amazing Together</h3>
                 <div class="contact-detail">
                     <i class="fas fa-map-marker-alt"></i>
-                    <span>123 Studio Street, Creative City, CC 10001</span>
+                    <span>Gichagi <br>Bridge international Academy</span>
                 </div>
                 <div class="contact-detail">
                     <i class="fas fa-phone-alt"></i>
-                    <span>+254 768-060-600</span>
+                    <span>+254 792-347-505</span>
                 </div>
                 <div class="contact-detail">
                     <i class="fas fa-envelope"></i>
-                    <span>josbosimwenda@gmail.com</span>
+                    <span>danwilliams9930@gmail.com</span>
                 </div>
                 <div class="contact-detail">
                     <i class="fas fa-clock"></i>
                     <span>Mon-Fri: 9AM - 7PM | Sat: 10AM - 4PM</span>
                 </div>
                 <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/williams_on_the_beat?igsh=aGJueDVmMGozd2Ni"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/williams_on_the_beat?igsh=aGJueDVmMGozd2Ni"><i class="fab fa-instagram"></i></a>
+                    <a href="http://tiktok.com/@williams_on_the_beat"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://youtube.com/@officialwilliamsrecords?si=HROc-WbH38rg9fkC"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
             <div class="contact-form animate-on-scroll">
@@ -1636,10 +1714,10 @@
                 <h3>Williams Studios</h3>
                 <p>Creating exceptional audio and visual experiences that inspire and captivate audiences.</p>
                 <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/williams_on_the_beat?igsh=aGJueDVmMGozd2Ni"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/williams_on_the_beat?igsh=aGJueDVmMGozd2Ni"><i class="fab fa-instagram"></i></a>
+                    <a href="http://tiktok.com/@williams_on_the_beat"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://youtube.com/@officialwilliamsrecords?si=HROc-WbH38rg9fkC"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
             <div class="footer-col">
@@ -1667,9 +1745,9 @@
             </div>
             <div class="footer-col">
                 <h3>Contact Info</h3>
-                <p><i class="fas fa-map-marker-alt"></i> 123 Studio Street, Creative City</p>
-                <p><i class="fas fa-phone-alt"></i> +254 768-060-600</p>
-                <p><i class="fas fa-envelope"></i> josbosimwenda@gmail.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> Gichagi <br>Bridge international Academy</p>
+                <p><i class="fas fa-phone-alt"></i> +254 792-347-505</p>
+                <p><i class="fas fa-envelope"></i> danwilliams9930@gmail.com</p>
             </div>
         </div>
         <div class="copyright">
