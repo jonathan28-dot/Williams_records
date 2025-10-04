@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <style>
         :root {
-            --primary: #6a11cb;
-            --secondary: #2575fc;
+            --primary: #ffffff;
+            --secondary: #6a11cb;
             --accent: #ff4d4d;
             --dark: #1a1a2e;
             --light: #f8f9fa;
@@ -17,7 +17,7 @@
             --text-light: #f8f9fa;
             --bg-color: #f8f9fa;
             --card-bg: white;
-            --header-bg: linear-gradient(135deg, var(--primary), var(--secondary));
+            --header-bg: linear-gradient(135deg, var(--primary), #f0f0f0);
             --transition: all 0.5s cubic-bezier(0.65, 0, 0.35, 1);
         }
 
@@ -27,7 +27,7 @@
             --text: #f8f9fa;
             --light: #1e1e1e;
             --card-bg: #2d2d2d;
-            --header-bg: linear-gradient(135deg, #4a148c, #1565c0);
+            --header-bg: linear-gradient(135deg, #2d2d2d, #1e1e1e);
         }
 
         * {
@@ -47,12 +47,12 @@
         /* Theme Toggle Button */
         .theme-toggle {
             position: fixed;
-            bottom: 100px;
+            bottom: 140px;
             right: 30px;
-            background: var(--primary);
-            color: white;
-            width: 50px;
-            height: 50px;
+            background: var(--secondary);
+            color: black;
+            width: 45px;
+            height: 45px;
             border-radius: 50%;
             display: flex;
             justify-content: center;
@@ -73,7 +73,7 @@
         /* Header & Navigation */
         header {
             background: var(--header-bg);
-            color: var(--text-light);
+            color: var(--text);
             padding: 1rem 2rem;
             position: fixed;
             width: 100%;
@@ -85,12 +85,12 @@
 
         .header-scroll {
             padding: 0.5rem 2rem;
-            background: rgba(106, 17, 203, 0.95);
+            background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
         }
 
         [data-theme="dark"] .header-scroll {
-            background: rgba(74, 20, 140, 0.95);
+            background: rgba(45, 45, 45, 0.95);
         }
 
         .navbar {
@@ -110,7 +110,7 @@
 
         .logo i {
             margin-right: 10px;
-            color: var(--accent);
+            color: var(--secondary);
         }
 
         .nav-links {
@@ -123,7 +123,7 @@
         }
 
         .nav-links a {
-            color: var(--text-light);
+            color: var(--text);
             text-decoration: none;
             font-weight: 500;
             transition: var(--transition);
@@ -131,7 +131,7 @@
         }
 
         .nav-links a:hover {
-            color: var(--accent);
+            color: var(--secondary);
         }
 
         .nav-links a::after {
@@ -139,7 +139,7 @@
             position: absolute;
             width: 0;
             height: 2px;
-            background: var(--accent);
+            background: var(--secondary);
             bottom: -5px;
             left: 0;
             transition: var(--transition);
@@ -153,7 +153,7 @@
             display: none;
             font-size: 1.5rem;
             cursor: pointer;
-            color: white;
+            color: var(--text);
         }
 
         /* WhatsApp Button */
@@ -161,11 +161,11 @@
             text-decoration: none;
             position: fixed;
             bottom: 30px;
-            right: 30px;
+            right: 27px;
             background: #25D366;
             color: white;
-            width: 60px;
-            height: 60px;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
             display: flex;
             justify-content: center;
@@ -180,6 +180,31 @@
         .whatsapp-btn:hover {
             transform: scale(1.1);
             box-shadow: 0 6px 16px rgba(37, 211, 102, 0.4);
+        }
+
+        /* Call Button */
+        .call-btn {
+            text-decoration: none;
+            position: fixed;
+            bottom: 90px;
+            right: 30px;
+            background: var(--secondary);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            box-shadow: 0 4px 12px rgba(106, 17, 203, 0.3);
+            z-index: 999;
+            transition: var(--transition);
+        }
+
+        .call-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 16px rgba(106, 17, 203, 0.4);
         }
 
         @keyframes pulse {
@@ -253,7 +278,7 @@
 
         .btn {
             display: inline-block;
-            background: var(--accent);
+            background: var(--secondary);
             color: var(--text-light);
             padding: 0.8rem 2rem;
             border-radius: 50px;
@@ -262,12 +287,12 @@
             transition: var(--transition);
             border: none;
             cursor: pointer;
-            box-shadow: 0 4px 15px rgba(255, 77, 77, 0.3);
+            box-shadow: 0 4px 15px rgba(106, 17, 203, 0.3);
         }
 
         .btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(255, 77, 77, 0.4);
+            box-shadow: 0 6px 20px rgba(106, 17, 203, 0.4);
         }
 
         .btn-outline {
@@ -278,7 +303,7 @@
 
         .btn-outline:hover {
             background: var(--text-light);
-            color: var(--primary);
+            color: var(--secondary);
         }
 
         /* About Section */
@@ -309,7 +334,7 @@
 
         .about-content h2 {
             font-size: 2.5rem;
-            color: var(--primary);
+            color: var(--secondary);
             margin-bottom: 1.5rem;
         }
 
@@ -320,7 +345,7 @@
 
         /* Mission & Vision Section */
         .mission-vision {
-            background: var(--header-bg);
+            background: var(--secondary);
             color: var(--text-light);
             position: relative;
             overflow: hidden;
@@ -417,9 +442,9 @@
 
         .wc-card i {
             font-size: 2.5rem;
-            color: var(--primary);
+            color: var(--secondary);
             margin-bottom: 1.5rem;
-            background: linear-gradient(to right, var(--primary), var(--secondary));
+            background: linear-gradient(to right, var(--secondary), #2575fc);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -427,7 +452,7 @@
         .wc-card h3 {
             font-size: 1.5rem;
             margin-bottom: 1rem;
-            color: var(--primary);
+            color: var(--secondary);
         }
 
         .wc-card p {
@@ -435,214 +460,9 @@
             line-height: 1.6;
         }
 
-        /* Experience Section */
-        .experience {
-            background: var(--light);
-            transition: var(--transition);
-        }
-
-        .video-container {
-            position: relative;
-            width: 100%;
-            max-width: 800px;
-            margin: 0 auto;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .video-container video {
-            width: 100%;
-            display: block;
-        }
-
-        .video-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.3);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            opacity: 1;
-            transition: var(--transition);
-        }
-
-        .video-overlay:hover {
-            background: rgba(0, 0, 0, 0.5);
-        }
-
-        .play-btn {
-            width: 80px;
-            height: 80px;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            font-size: 2rem;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .play-btn:hover {
-            transform: scale(1.1);
-            background: rgba(255, 255, 255, 0.3);
-        }
-
-        /* Testimonials Section */
-        .testimonials {
-            background: var(--header-bg);
-            color: var(--text-light);
-            transition: var(--transition);
-        }
-
-        .testimonials .section-title h2 {
-            color: var(--text-light);
-        }
-
-        .testimonials .section-title h2::after {
-            background: var(--accent);
-        }
-
-        .testimonials .section-title p {
-            color: var(--text-light);
-        }
-
-        .testimonial-container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .testimonial-slider {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .testimonial-slide {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 10px;
-            padding: 2rem;
-            margin: 0 1rem;
-            text-align: center;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            transition: var(--transition);
-        }
-
-        .client-img {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin: 0 auto 1rem;
-            border: 3px solid var(--accent);
-        }
-
-        .client-rating {
-            color: #ffc107;
-            margin-bottom: 1rem;
-        }
-
-        .client-text {
-            font-style: italic;
-            margin-bottom: 1.5rem;
-            line-height: 1.6;
-        }
-
-        .client-name {
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-
-        .client-role {
-            opacity: 0.8;
-            font-size: 0.9rem;
-        }
-
-        .view-more-btn {
-            text-align: center;
-            margin-top: 2rem;
-        }
-
-        /* Team Section */
-        .team {
-            background: var(--card-bg);
-            transition: var(--transition);
-        }
-
-        .team-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        .team-member {
-            background: var(--card-bg);
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: var(--transition);
-            text-align: center;
-        }
-
-        .team-member:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .member-img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            transition: var(--transition);
-        }
-
-        .member-info {
-            padding: 1.5rem;
-        }
-
-        .member-info h3 {
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-            color: var(--primary);
-        }
-
-        .member-info p {
-            color: var(--accent);
-            margin-bottom: 1rem;
-            font-weight: 500;
-        }
-
-        .member-social {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-        }
-
-        .member-social a {
-            color: var(--primary);
-            width: 35px;
-            height: 35px;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: #f1f1f1;
-            transition: var(--transition);
-        }
-
-        .member-social a:hover {
-            background: var(--primary);
-            color: white;
-        }
-
         /* Services Section */
         .section {
-            padding: 5rem 2rem;
+            padding: 2rem 2rem;
             max-width: 1200px;
             margin: 0 auto;
         }
@@ -654,7 +474,7 @@
 
         .section-title h2 {
             font-size: 2.5rem;
-            color: var(--primary);
+            color: var(--secondary);
             position: relative;
             display: inline-block;
             margin-bottom: 1rem;
@@ -665,7 +485,7 @@
             position: absolute;
             width: 50%;
             height: 4px;
-            background: linear-gradient(to right, var(--primary), var(--secondary));
+            background: linear-gradient(to right, var(--secondary), #2575fc);
             bottom: -10px;
             left: 25%;
             border-radius: 2px;
@@ -679,8 +499,8 @@
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
         }
 
         .service-card {
@@ -711,12 +531,112 @@
         .service-content h3 {
             font-size: 1.5rem;
             margin-bottom: 0.5rem;
-            color: var(--primary);
+            color: var(--secondary);
         }
 
         .service-content p {
             color: var(--text);
             margin-bottom: 1rem;
+        }
+
+        /* Electronics Section */
+        .electronics {
+            background: var(--light);
+            transition: var(--transition);
+        }
+
+        .electronics-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .electronics-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .electronics-header h2 {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 1rem;
+        }
+
+        .electronics-header p {
+            color: var(--text);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .electronics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .electronics-card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .electronics-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .electronics-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .electronics-content {
+            padding: 1.5rem;
+        }
+
+        .electronics-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--secondary);
+        }
+
+        .electronics-price {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .electronics-content p {
+            color: var(--text);
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .electronics-btn {
+            display: block;
+            width: 100%;
+            text-align: center;
+            background: var(--secondary);
+            color: white;
+            padding: 0.7rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .electronics-btn:hover {
+            background: #2575fc;
+        }
+
+        .view-all-btn {
+            text-align: center;
         }
 
         /* Gallery Section */
@@ -776,7 +696,7 @@
         /* YouTube Section */
         .youtube {
             text-align: center;
-            background: var(--header-bg);
+            background: #6b11cbaf;
             color: var(--text-light);
             transition: var(--transition);
         }
@@ -814,7 +734,7 @@
         }
 
         .live-recordings h3 {
-            color: var(--primary);
+            color: var(--secondary);
             margin-bottom: 1rem;
             display: flex;
             align-items: center;
@@ -834,7 +754,7 @@
         }
 
         .live-recordings-group h4 {
-            color: var(--primary);
+            color: var(--secondary);
             margin-bottom: 0.5rem;
         }
 
@@ -851,6 +771,240 @@
             color: var(--accent);
             text-decoration: underline;
         }
+        /* Team Section */
+        .team {
+            background: var(--card-bg);
+            transition: var(--transition);
+            padding: 2rem 2rem;
+        }
+
+        .team-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(28px, 1fr));
+            gap: 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .team-member {
+            background: var(--card-bg);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            transition: var(--transition);
+            text-align: center;
+            border: 1px solid rgba(106, 17, 203, 0.1);
+        }
+
+        .team-member:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 20px 40px rgba(106, 17, 203, 0.15);
+        }
+
+        .member-img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            transition: var(--transition);
+            border-bottom: 3px solid var(--secondary);
+        }
+
+        .team-member:hover .member-img {
+            transform: scale(1.05);
+        }
+
+        .member-info {
+            padding: 2rem 1.5rem;
+        }
+
+        .member-info h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+            color: var(--secondary);
+            font-weight: 600;
+        }
+
+        .member-info > p:first-of-type {
+            color: var(--accent);
+            margin-bottom: 0.8rem;
+            font-weight: 500;
+            font-size: 1rem;
+        }
+
+        .member-info > p:last-of-type {
+            color: var(--text);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .member-social {
+            display: flex;
+            justify-content: center;
+            gap: 0.8rem;
+        }
+
+        .member-social a {
+            text-decoration: none;
+            color: var(--secondary);
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(106, 17, 203, 0.1);
+            transition: var(--transition);
+            font-size: 0.9rem;
+        }
+
+        .member-social a:hover {
+            background: var(--secondary);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            background: var(--secondary);
+            color: var(--text-light);
+            transition: var(--transition);
+            padding: 5rem 2rem;
+            position: relative;
+        }
+
+        .testimonials::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+            opacity: 0.05;
+            z-index: 0;
+        }
+
+        .testimonials .section-title h2 {
+            color: var(--text-light);
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonials .section-title h2::after {
+            background: var(--accent);
+        }
+
+        .testimonials .section-title p {
+            color: var(--text-light);
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-slider {
+            position: relative;
+            overflow: hidden;
+            margin: 2rem 0;
+        }
+
+        .testimonial-slide {
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(15px);
+            border-radius: 15px;
+            padding: 2.5rem;
+            margin: 0 1rem;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .testimonial-slide::before {
+            content: '"';
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            font-size: 4rem;
+            color: rgba(255, 255, 255, 0.2);
+            font-family: Georgia, serif;
+        }
+
+        .client-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 1.5rem;
+            border: 3px solid var(--accent);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .client-rating {
+            color: #ffc107;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .client-rating i {
+            margin: 0 2px;
+        }
+
+        .client-text {
+            font-style: italic;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+            font-size: 1.1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .client-name {
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+            color: white;
+        }
+
+        .client-role {
+            opacity: 0.9;
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .testimonial-nav {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .testimonial-nav button {
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .testimonial-nav button:hover {
+            background: var(--accent);
+            transform: scale(1.1);
+        }
+
 
         /* Contact Section */
         .contact {
@@ -871,7 +1025,7 @@
 
         .contact-info h3 {
             font-size: 1.8rem;
-            color: var(--primary);
+            color: var(--secondary);
             margin-bottom: 1.5rem;
         }
 
@@ -929,7 +1083,7 @@
         .form-group input:focus,
         .form-group textarea:focus,
         .form-group select:focus {
-            border-color: var(--primary);
+            border-color: var(--secondary);
             outline: none;
             box-shadow: 0 0 0 3px rgba(106, 17, 203, 0.1);
         }
@@ -984,6 +1138,7 @@
         }
 
         .social-links a {
+            text-decoration: none;
             color: var(--secondary);
             background: rgba(255, 255, 255, 0.1);
             width: 40px;
@@ -1095,13 +1250,172 @@
             transform: rotate(90deg);
         }
 
-        /* Responsive Styles */
-        @media (max-width: 992px) {
-            .hero h1 {
-                font-size: 2.8rem;
+        /* Booking Prompt */
+        .booking-prompt {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.9);
+            background: rgba(29, 23, 23, 0.692);
+            color: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+            z-index: 10000;
+            display: none;
+            max-width: 500px;
+            width: 90%;
+            animation: promptAppear 0.5s ease-out forwards;
+            border: 2px solid var(--secondary);
+        }
+
+        .booking-prompt.show {
+            display: block;
+        }
+
+        .booking-prompt-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .booking-prompt-header i {
+            font-size: 3rem;
+            color: var(--secondary);
+            margin-bottom: 1rem;
+        }
+
+        .booking-prompt-header h3 {
+            color: var(--secondary);
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .booking-prompt-header p {
+            color: var(--text);
+            opacity: 0.8;
+        }
+
+        .booking-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .booking-feature {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 0.8rem;
+            background: rgba(106, 17, 203, 0.05);
+            border-radius: 10px;
+            transition: var(--transition);
+        }
+
+        .booking-feature:hover {
+            background: rgba(106, 17, 203, 0.1);
+            transform: translateX(5px);
+        }
+
+        .booking-feature i {
+            color: var(--secondary);
+            font-size: 1.2rem;
+            width: 25px;
+        }
+
+        .booking-feature span {
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .booking-prompt-btns {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .booking-prompt-btns .btn {
+            flex: 1;
+            padding: 1rem;
+            font-size: 1rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .close-prompt {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            background: none;
+            border: none;
+            color: var(--text);
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: var(--transition);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .close-prompt:hover {
+            background: rgba(0, 0, 0, 0.1);
+            transform: rotate(90deg);
+        }
+
+        .prompt-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+            z-index: 9999;
+            display: none;
+        }
+
+        .prompt-overlay.show {
+            display: block;
+        }
+
+        @keyframes promptAppear {
+            from {
+                opacity: 0;
+                transform: translate(-50%, -50%) scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(1);
             }
         }
 
+        /* Enhanced Social Icons */
+        .social-links a,
+        .member-social a {
+            text-decoration: none;
+            color: var(--secondary);
+            background: rgba(106, 17, 203, 0.1);
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: var(--transition);
+            font-size: 0.9rem;
+        }
+
+        .social-links a:hover,
+        .member-social a:hover {
+            background: var(--secondary);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Responsive Design */
         @media (max-width: 768px) {
             .menu-btn {
                 display: block;
@@ -1127,55 +1441,48 @@
             .nav-links li {
                 margin: 1rem 0;
             }
-
-            .hero h1 {
-                font-size: 2.2rem;
+            .team-container {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 2rem;
             }
-
-            .hero p {
+            
+            .testimonial-slide {
+                padding: 2rem 1.5rem;
+                margin: 0 0.5rem;
+            }
+            
+            .booking-features {
+                grid-template-columns: 1fr;
+            }
+            
+            .booking-prompt-btns {
+                flex-direction: column;
+            }
+            
+            .member-img {
+                height: 250px;
+            }
+            
+            .client-text {
                 font-size: 1rem;
-            }
-
-            .btn {
-                padding: 0.6rem 1.5rem;
-            }
-
-            .section {
-                padding: 3rem 1.5rem;
-            }
-
-            .section-title h2 {
-                font-size: 2rem;
             }
         }
 
-        @media (max-width: 576px) {
-            .hero h1 {
-                font-size: 1.8rem;
-            }
-
-            .hero-btns {
-                display: flex;
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            .btn-outline {
-                margin-left: 0;
-            }
-
-            .services-grid, .gallery-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .whatsapp-btn, .theme-toggle {
-                width: 50px;
-                height: 50px;
-                font-size: 1.5rem;
+        @media (max-width: 480px) {
+            .team {
+                padding: 3rem 1rem;
             }
             
-            .theme-toggle {
-                bottom: 90px;
+            .testimonials {
+                padding: 3rem 1rem;
+            }
+            
+            .booking-prompt {
+                padding: 2rem 1.5rem;
+            }
+            
+            .booking-prompt-header h3 {
+                font-size: 1.5rem;
             }
         }
     </style>
@@ -1191,6 +1498,11 @@
         <i class="fab fa-whatsapp"></i>
     </a>
 
+    <!-- Call Button -->
+    <a href="tel:+254792347505" class="call-btn animate__animated animate__fadeInUp animate__delay-1s">
+        <i class="fas fa-phone"></i>
+    </a>
+
     <!-- Header -->
     <header id="header">
         <div class="navbar">
@@ -1202,12 +1514,13 @@
                 <i class="fas fa-bars"></i>
             </div>
             <ul class="nav-links">
-                <li><a href="#home" class="active">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#team">Our Team</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="electronics.html">Electronics</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="team.html">Our Team</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
     </header>
@@ -1220,20 +1533,20 @@
                 <h1 class="animate__animated animate__fadeInDown">Create. Record. Inspire.</h1>
                 <p class="animate__animated animate__fadeInUp animate__delay-1s">Professional music production, photography, and videography services to bring your creative vision to life.</p>
                 <div class="hero-btns">
-                    <a href="#contact" class="btn animate__animated animate__fadeInUp animate__delay-2s">Book a Session</a>
-                    <a href="#services" class="btn btn-outline animate__animated animate__fadeInUp animate__delay-2s">Our Services</a>
+                    <a href="contact.html" class="btn animate__animated animate__fadeInUp animate__delay-2s">Book a Session</a>
+                    <a href="services.html" class="btn btn-outline animate__animated animate__fadeInUp animate__delay-2s">Our Services</a>
                 </div>
             </div>
         </div>
         
-        <!-- Slide 2 -->
-        <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80')">
+        <!-- Slide 2 - Electronics Sales -->
+        <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1599669454699-248893623440?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80')">
             <div class="hero-content">
-                <h1>Premium Recording Studio</h1>
-                <p>State-of-the-art equipment and acoustically treated spaces for the perfect sound.</p>
+                <h1>Premium Studio Electronics</h1>
+                <p>Professional audio equipment, accessories, and studio gear for creators and professionals.</p>
                 <div class="hero-btns">
-                    <a href="#contact" class="btn">Book Now</a>
-                    <a href="#about" class="btn btn-outline">Learn More</a>
+                    <a href="electronics.html" class="btn">Shop Now</a>
+                    <a href="#electronics" class="btn btn-outline">View Products</a>
                 </div>
             </div>
         </div>
@@ -1244,8 +1557,8 @@
                 <h1>Capturing Your Moments</h1>
                 <p>Professional photography and videography services for all occasions.</p>
                 <div class="hero-btns">
-                    <a href="#gallery" class="btn">View Gallery</a>
-                    <a href="#contact" class="btn btn-outline">Get a Quote</a>
+                    <a href="gallery.html" class="btn">View Gallery</a>
+                    <a href="contact.html" class="btn btn-outline">Get a Quote</a>
                 </div>
             </div>
         </div>
@@ -1259,7 +1572,7 @@
         </div>
         <div class="about-container">
             <div class="about-img animate-on-scroll">
-                <img src="https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Our Studio">
+                <img src="will.jpg" alt="Our Studio">
             </div>
             <div class="about-content animate-on-scroll">
                 <h2>Our Story</h2>
@@ -1269,8 +1582,8 @@
                     songwriters, producers, and engineers. We prioritize fostering creative development, empowering artists to embrace authenticity and confidence, 
                     and facilitating their pursuit of industry success and recognition. </p>
                 <p>At Williams Studios, we are dedicated to cultivating enduring relationships and creating an environment conducive to innovation, growth, and excellence, 
-                    enabling artists to thrive and realize their full potential.</p>
-                <a href="#team" class="btn">Meet Our Team</a>
+                    enabling artists to thrive and realize their full potential.</p>
+                <a href="team.html" class="btn">Meet Our Team</a>
             </div>
         </div>
     </section>
@@ -1295,7 +1608,7 @@
             <div class="mv-card animate-on-scroll">
                 <i class="fas fa-heart"></i>
                 <h3>Our Values</h3>
-                <p> Creativity, authenticity, collaboration, excellence, integrity, innovation, and cultural diversity.</p>
+                <p> Creativity, authenticity, collaboration, excellence, integrity, innovation, and cultural diversity.</p>
             </div>
         </div>
     </section>
@@ -1340,24 +1653,6 @@
         </div>
     </section>
 
-    <!-- Experience Section -->
-    <section class="section experience">
-        <div class="section-title">
-            <h2>Experience Our Work in Motion</h2>
-            <p>Watch this showcase of our production capabilities and creative vision</p>
-        </div>
-        <div class="video-container animate-on-scroll">
-            <video poster="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80">
-                <source src="https://assets.mixkit.co/videos/preview/mixkit-studio-shot-of-a-singer-with-a-microphone-1231-large.mp4" type="video/mp4">
-            </video>
-            <div class="video-overlay">
-                <div class="play-btn">
-                    <i class="fas fa-play"></i>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Services Section -->
     <section class="section" id="services">
         <div class="section-title">
@@ -1366,57 +1661,90 @@
         </div>
         <div class="services-grid">
             <div class="service-card animate-on-scroll">
-                <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Music Recording">
+                <img src="Music recording.jpg" alt="Music Recording">
                 <div class="service-content">
                     <h3>Music Recording</h3>
                     <p>State-of-the-art recording studio with professional equipment and sound engineers to capture your perfect performance.</p>
-                    <a href="#contact" class="btn">Book Now</a>
+                    <a href="services.html#music-recording" class="btn">Learn More</a>
                 </div>
             </div>
             <div class="service-card animate-on-scroll">
-                <img src="https://images.unsplash.com/photo-1520390138845-fd2d229dd553?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1489&q=80" alt="Photography">
+                <img src="photograp.jpg" alt="Photography">
                 <div class="service-content">
                     <h3>Photography</h3>
                     <p>Professional photography services for portraits, events, products, and more with our talented photographers.</p>
-                    <a href="#contact" class="btn">Book Now</a>
+                    <a href="services.html#music-recording" class="btn">Learn More</a>
                 </div>
             </div>
             <div class="service-card animate-on-scroll">
-                <img src="https://images.unsplash.com/photo-1545235617-9465d2a55698?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1480&q=80" alt="Video Clips">
+                <img src="video clip.jpg" alt="Video Clips">
                 <div class="service-content">
                     <h3>Video Clips</h3>
                     <p>High-quality music video production with creative concepts, professional filming, and editing.</p>
-                    <a href="#contact" class="btn">Book Now</a>
+                    <a href="services.html#music-recording" class="btn">Learn More</a>
                 </div>
             </div>
             <div class="service-card animate-on-scroll">
-                <img src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Wedding Filming">
+                <img src="photo3.jpg" alt="Wedding Filming">
                 <div class="service-content">
                     <h3>Wedding Filming</h3>
                     <p>Capture your special day with our cinematic wedding filming services that you'll cherish forever.</p>
-                    <a href="#contact" class="btn">Book Now</a>
+                    <a href="services.html#music-recording" class="btn">Learn More</a>
                 </div>
             </div>
-            <div class="service-card animate-on-scroll">
-                <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Audio Mixing">
-                <div class="service-content">
-                    <h3>Audio Mixing</h3>
-                    <p>Professional audio mixing and mastering services to polish your recordings to perfection.</p>
-                    <a href="#contact" class="btn">Book Now</a>
+            
+        </div>
+    </section>
+
+
+    <!-- Electronics Preview Section -->
+    <section class="electronics" id="electronics">
+        <div class="electronics-container">
+            <div class="electronics-header">
+                <h2>Studio Electronics & Equipment</h2>
+                <p>High-quality audio equipment and accessories for your creative projects</p>
+            </div>
+            <div class="electronics-grid">
+                <!-- Product 1 -->
+                <div class="electronics-card animate-on-scroll">
+                    <img src="https://images.unsplash.com/photo-1571330735066-03aaa9429d89?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Studio Headphones">
+                    <div class="electronics-content">
+                        <h3>Studio Headphones</h3>
+                        <div class="electronics-price">KSh 4,500</div>
+                        <p>Professional studio headphones with noise cancellation and exceptional sound clarity.</p>
+                        <a href="electronics.html" class="electronics-btn">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="electronics-card animate-on-scroll">
+                    <img src="https://images.unsplash.com/photo-1599669454699-248893623440?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Audio Interface">
+                    <div class="electronics-content">
+                        <h3>Audio Interface</h3>
+                        <div class="electronics-price">KSh 12,500</div>
+                        <p>Professional 2-channel USB audio interface with high-quality preamps.</p>
+                        <a href="electronics.html" class="electronics-btn">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="electronics-card animate-on-scroll">
+                    <img src="https://images.unsplash.com/photo-1600003263720-95b45a4035d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Studio Monitors">
+                    <div class="electronics-content">
+                        <h3>Studio Monitors</h3>
+                        <div class="electronics-price">KSh 18,000</div>
+                        <p>Pair of professional studio monitor speakers with flat frequency response.</p>
+                        <a href="electronics.html" class="electronics-btn">View Details</a>
+                    </div>
                 </div>
             </div>
-            <div class="service-card animate-on-scroll">
-                <img src="https://images.unsplash.com/photo-1551969014-7d2c4cddf0b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1472&q=80" alt="Live Events">
-                <div class="service-content">
-                    <h3>Live Events</h3>
-                    <p>Comprehensive audio-visual solutions for concerts, corporate events, and live performances.</p>
-                    <a href="#contact" class="btn">Book Now</a>
-                </div>
+            <div class="view-all-btn">
+                <a href="electronics.html" class="btn">View All Electronics</a>
             </div>
         </div>
     </section>
 
-    <!-- Gallery Section -->
+    <!-- Gallery Preview Section -->
     <section class="section gallery" id="gallery">
         <div class="section-title">
             <h2>Our Gallery</h2>
@@ -1424,26 +1752,27 @@
         </div>
         <div class="gallery-grid">
             <!-- Photo Items -->
-            <div class="gallery-item animate-on-scroll" onclick="openModal('https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80')">
-                <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Concert Photography">
+            <div class="gallery-item animate-on-scroll" onclick="openModal('photo2.jpg')">
+                <img src="photo2.jpg" alt="Concert Photography">
                 <div class="video-overlay">
                     <i class="fas fa-search-plus play-icon"></i>
                 </div>
             </div>
-            <div class="gallery-item animate-on-scroll" onclick="openModal('https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80')">
-                <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Studio Session">
+            <div class="gallery-item animate-on-scroll" onclick="openModal('photo3.jpg')">
+                <img src="photo3.jpg" alt="Studio Session">
                 <div class="video-overlay">
                     <i class="fas fa-search-plus play-icon"></i>
                 </div>
             </div>
             <!-- Video Items with YouTube -->
-            <div class="gallery-item animate-on-scroll" onclick="openModal('https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80')">
-                <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="DJ Performance">
+            <div class="gallery-item animate-on-scroll" onclick="openModal('photo1.png')">
+                <img src="photo1.png" alt="DJ Performance">
                 <div class="video-overlay">
                     <i class="fas fa-search-plus play-icon"></i>
                 </div>
             </div>
         </div>
+       
     </section>
 
     <!-- Live Recordings Section -->
@@ -1469,14 +1798,14 @@
                         <h4>HANNINGTONE</h4>
                         <a href="https://youtu.be/yT8FiDC5Z8w?si=XSbJcn-sErLSIXit" target="_blank">Watch on YouTube</a>
                     </div>
-                    <div class="live-recordings-group">
+                    <!-- <div class="live-recordings-group">
                         <h4>ALI MUKHWANA ft HENRY THE BAND</h4>
                         <a href="https://youtu.be/V0Zj76FHiN4?si=9sdJZOvem2Q3D6zq" target="_blank">Watch on YouTube</a>
                     </div>
                     <div class="live-recordings-group">
                         <h4>FLORENEC FT GUARDIAN ANGEL</h4>
                         <a href="https://youtu.be/OFnuoep38TY?si=k6Wy_zFQlHGeEBUB" target="_blank">Watch on YouTube</a>
-                    </div>
+                    </div> -->
                 </div>
                 
                 <!-- Right Column -->
@@ -1493,7 +1822,7 @@
                         <h4>MASAUTI</h4>
                         <a href="https://youtu.be/lDctT0kJgis?si=ATo037RPb2uCBFUx" target="_blank">Watch on YouTube</a>
                     </div>
-                    <div class="live-recordings-group">
+                    <!-- <div class="live-recordings-group">
                         <h4>FLORENCE ANDENYI</h4>
                         <a href="https://youtu.be/7G0UIk89cm4?si=0Sg6Q4JAX1_hlXFC" target="_blank">Watch on YouTube</a>
                     </div>
@@ -1501,13 +1830,16 @@
                     <div class="live-recordings-group">
                         <h4>TESLA KENYA</h4>
                         <a href="https://youtu.be/qkLnuWgQKbI?si=QqU1SavEmyJgIcNh" target="_blank">Watch on YouTube</a>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
+         <div class="view-all-btn" style="text-align: center; margin-top: 2rem;">
+            <a href="gallery.html" class="btn">View Full Gallery</a>
+        </div>
     </section>
 
-    <!-- Team Section -->
+    <!-- Team Preview Section -->
     <section class="section team" id="team">
         <div class="section-title">
             <h2>Our Creative Team</h2>
@@ -1515,9 +1847,9 @@
         </div>
         <div class="team-container">
             <div class="team-member animate-on-scroll">
-                <img src="download.jpeg" alt="Alex Johnson" class="member-img">
+                <img src="IMG_0779.png" alt="Alex Johnson" class="member-img">
                 <div class="member-info">
-                    <h3>Alex Johnson</h3>
+                    <h3>Daniel Suwa</h3>
                     <p>Founder & Lead Producer</p>
                     <p>15+ years in music production and audio engineering</p>
                     <div class="member-social">
@@ -1528,6 +1860,7 @@
                     </div>
                 </div>
             </div>
+            
             <div class="team-member animate-on-scroll">
                 <img src="images.jpeg" alt="Jonathan Bosimwenda" class="member-img">
                 <div class="member-info">
@@ -1543,11 +1876,11 @@
                 </div>
             </div>
             <div class="team-member animate-on-scroll">
-                <img src="images (1).jpeg" alt="Marcus Lee" class="member-img">
+                <img src="IMG_0779.png" alt="Alex Johnson" class="member-img">
                 <div class="member-info">
-                    <h3>Marcus Lee</h3>
-                    <p>Head Engineer</p>
-                    <p>Audio specialist with expertise in mixing and mastering</p>
+                    <h3>Daniel Suwa</h3>
+                    <p>Founder & Lead Producer</p>
+                    <p>15+ years in music production and audio engineering</p>
                     <div class="member-social">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -1556,12 +1889,13 @@
                     </div>
                 </div>
             </div>
+            
             <div class="team-member animate-on-scroll">
-                <img src="images (2).jpeg" alt="Elena Rodriguez" class="member-img">
+                <img src="images.jpeg" alt="Jonathan Bosimwenda" class="member-img">
                 <div class="member-info">
-                    <h3>Elena Rodriguez</h3>
-                    <p>Photography Lead</p>
-                    <p>Portrait and event photography specialist</p>
+                    <h3>Jonathan Bosimwenda</h3>
+                    <p>Creative Director</p>
+                    <p>Specializes in visual storytelling and concept development</p>
                     <div class="member-social">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -1570,6 +1904,10 @@
                     </div>
                 </div>
             </div>
+            
+        </div>
+        <div class="view-all-btn" style="text-align: center; margin-top: 2rem;">
+            <a href="team.html" class="btn">Meet Full Team</a>
         </div>
     </section>
 
@@ -1607,22 +1945,6 @@
                     <h4 class="client-name">Michael & Sarah Thompson</h4>
                     <p class="client-role">Wedding Clients</p>
                 </div>
-                <div class="testimonial-slide animate-on-scroll">
-                    <img src="images (2).jpeg" alt="Client" class="client-img">
-                    <div class="client-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="client-text">"As a record label, we've worked with many studios, but Williams stands out for their professionalism and creative vision. They consistently deliver exceptional quality on tight deadlines."</p>
-                    <h4 class="client-name">David Miller</h4>
-                    <p class="client-role">A&R Director, Urban Records</p>
-                </div>
-            </div>
-            <div class="view-more-btn">
-                <a href="#" class="btn">View More Testimonials</a>
             </div>
         </div>
     </section>
@@ -1671,7 +1993,7 @@
                 </div>
             </div>
             <div class="contact-form animate-on-scroll">
-                <form action="https://formspree.io/f/xgvzragg method="POST">
+                <form action="https://formspree.io/f/xgvzragg" method="POST">
                     <div class="form-group">
                         <label for="name">Your Name</label>
                         <input type="text" id="name" name="name" placeholder="Enter your full name" required>
@@ -1723,24 +2045,24 @@
             <div class="footer-col">
                 <h3>Quick Links</h3>
                 <ul class="footer-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#gallery">Gallery</a></li>
-                    <li><a href="#team">Our Team</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="team.html">Our Team</a></li>
+                    <li><a href="electronics.html">Electronics</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
             <div class="footer-col">
                 <h3>Services</h3>
                 <ul class="footer-links">
-                    <li><a href="#">Music Recording</a></li>
-                    <li><a href="#">Photography</a></li>
-                    <li><a href="#">Video Production</a></li>
-                    <li><a href="#">Wedding Filming</a></li>
-                    <li><a href="#">Audio Mixing</a></li>
-                    <li><a href="#">Live Events</a></li>
+                    <li><a href="services.html#music-recording">Music Recording</a></li>
+                    <li><a href="services.html#photography">Photography</a></li>
+                    <li><a href="services.html#video-clips">Video Production</a></li>
+                    <li><a href="services.html#wedding-filming">Wedding Filming</a></li>
+                    <li><a href="services.html#audio-mixing">Audio Mixing</a></li>
+                    <li><a href="services.html#live-events">Live Events</a></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -1754,6 +2076,47 @@
             <p>&copy; 2023 Williams Studios. All Rights Reserved.</p>
         </div>
     </footer>
+
+    <!-- Booking Prompt Overlay -->
+    <div class="prompt-overlay" id="promptOverlay"></div>
+
+    <!-- Booking Prompt -->
+    <div class="booking-prompt" id="bookingPrompt">
+        <button class="close-prompt" id="closePrompt">&times;</button>
+        <div class="booking-prompt-header">
+            <i class="fas fa-calendar-check"></i>
+            <h3>Ready to Create Something Amazing?</h3>
+            <p>Book your session now and get 15% off your first project!</p>
+        </div>
+        
+        <div class="booking-features">
+            <div class="booking-feature">
+                <i class="fas fa-star"></i>
+                <span>Premium Quality</span>
+            </div>
+            <div class="booking-feature">
+                <i class="fas fa-clock"></i>
+                <span>Flexible Scheduling</span>
+            </div>
+            <div class="booking-feature">
+                <i class="fas fa-users"></i>
+                <span>Expert Team</span>
+            </div>
+            <div class="booking-feature">
+                <i class="fas fa-gift"></i>
+                <span>Special Offer</span>
+            </div>
+        </div>
+        
+        <div class="booking-prompt-btns">
+            <a href="contact.html" class="btn">
+                <i class="fas fa-calendar-alt"></i> Book Now
+            </a>
+            <button class="btn btn-outline" id="laterBtn" style="color:#6a11cb;">
+                <i class="fas fa-clock"></i> Remind Later
+            </button>
+        </div>
+    </div>
 
     <!-- Modal -->
     <div class="modal" id="galleryModal">
@@ -1784,6 +2147,7 @@
                 menuBtn.innerHTML = '<i class="fas fa-bars"></i>';
             });
         });
+
 
         // Header scroll effect
         const header = document.getElementById('header');
@@ -1866,17 +2230,6 @@
             }
         });
 
-        // Video play button
-        const playBtn = document.querySelector('.play-btn');
-        const videoContainer = document.querySelector('.video-container');
-        const video = videoContainer.querySelector('video');
-        const videoOverlay = videoContainer.querySelector('.video-overlay');
-
-        playBtn.addEventListener('click', () => {
-            videoOverlay.style.display = 'none';
-            video.play();
-        });
-
         // Testimonial slider (simple version)
         let currentTestimonial = 0;
         const testimonials = document.querySelectorAll('.testimonial-slide');
@@ -1945,7 +2298,41 @@
         
         // Initialize slideshow
         showSlide(0);
-        setInterval(nextSlide, 5000); // Change slide every 5 seconds
+        setInterval(nextSlide, 4000); // Change slide every 4 seconds
+
+        // Booking Prompt Functionality
+        const bookingPrompt = document.getElementById('bookingPrompt');
+        const promptOverlay = document.getElementById('promptOverlay');
+        const closePrompt = document.getElementById('closePrompt');
+        const laterBtn = document.getElementById('laterBtn');
+
+        // Show booking prompt after 15 seconds
+        setTimeout(() => {
+            bookingPrompt.classList.add('show');
+            promptOverlay.classList.add('show');
+            document.body.style.overflow = 'hidden';
+        }, 30000);
+
+        // Close prompt when X is clicked
+        closePrompt.addEventListener('click', () => {
+            bookingPrompt.classList.remove('show');
+            promptOverlay.classList.remove('show');
+            document.body.style.overflow = 'auto';
+        });
+
+        // Close prompt when "Remind Later" is clicked
+        laterBtn.addEventListener('click', () => {
+            bookingPrompt.classList.remove('show');
+            promptOverlay.classList.remove('show');
+            document.body.style.overflow = 'auto';
+        });
+
+        // Close prompt when overlay is clicked
+        promptOverlay.addEventListener('click', () => {
+            bookingPrompt.classList.remove('show');
+            promptOverlay.classList.remove('show');
+            document.body.style.overflow = 'auto';
+        });
     </script>
 </body>
 </html>

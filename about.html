@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Williams Studios</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .stats-section {
+            background: var(--secondary);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .stat-item {
+            padding: 2rem;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--secondary);
+            transform: translateX(-50%);
+        }
+        
+        .timeline-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 4rem;
+            position: relative;
+        }
+        
+        .timeline-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        
+        .timeline-content {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            width: 45%;
+            position: relative;
+        }
+        
+        .timeline-content::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 20px;
+            height: 20px;
+            background: var(--secondary);
+            border-radius: 50%;
+            transform: translateY(-50%);
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-content::after {
+            right: -60px;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-content::after {
+            left: -60px;
+        }
+        
+        .timeline-year {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--secondary);
+            width: 45%;
+            text-align: center;
+        }
+        
+        @media (max-width: 768px) {
+            .timeline::before {
+                left: 30px;
+            }
+            
+            .timeline-item {
+                flex-direction: row !important;
+                align-items: flex-start;
+            }
+            
+            .timeline-content {
+                width: calc(100% - 80px);
+                margin-left: 80px;
+            }
+            
+            .timeline-content::after {
+                left: -60px !important;
+                right: auto !important;
+            }
+            
+            .timeline-year {
+                width: 60px;
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" id="themeToggle">
+        <i class="fas fa-sun"></i>
+    </button>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/+254745342734" class="whatsapp-btn">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Call Button -->
+    <a href="tel:+254792347505" class="call-btn">
+        <i class="fas fa-phone"></i>
+    </a>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="navbar">
+            <div class="logo">
+                <i class="fas fa-headphones"></i>
+                <span>Williams Studios</span>
+            </div>
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="electronics.html">Electronics</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html" class="active">About Us</a></li>
+                <li><a href="team.html">Our Team</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <h1>About Williams Studios</h1>
+        <p>Discover our journey, values, and commitment to excellence in creative media production</p>
+    </section>
+
+    <!-- About Story Section -->
+    <section class="section">
+        <div class="section-title">
+            <h2>Our Story</h2>
+            <p>From humble beginnings to becoming a leading creative studio</p>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+            <div class="animate-on-scroll">
+                <img src="will.jpg" alt="Our Studio" style="width: 100%; border-radius: 15px; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);">
+            </div>
+            <div class="animate-on-scroll">
+                <h3 style="color: var(--secondary); margin-bottom: 1.5rem; font-size: 2rem;">Building Dreams Through Sound and Vision</h3>
+                <p style="margin-bottom: 1.5rem; line-height: 1.6;">
+                    Founded in 2019, Williams Studios began as a modest recording space with big dreams. What started as a family passion project has evolved into a comprehensive media production studio serving clients nationwide and internationally.
+                </p>
+                <p style="margin-bottom: 1.5rem; line-height: 1.6;">
+                    Our team of creative professionals is dedicated to elevating musical artistry through superior production, strategic marketing, and promotional services. We mentor musicians, songwriters, producers, and engineers, prioritizing creative development and empowering artists to embrace authenticity.
+                </p>
+                <p style="margin-bottom: 2rem; line-height: 1.6;">
+                    At Williams Studios, we cultivate enduring relationships and create an environment conducive to innovation, growth, and excellence, enabling artists to thrive and realize their full potential.
+                </p>
+                <a href="team.html" class="btn">Meet Our Team</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="stats-grid">
+            <div class="stat-item animate-on-scroll">
+                <div class="stat-number">500+</div>
+                <div class="stat-label">Projects Completed</div>
+            </div>
+            <div class="stat-item animate-on-scroll">
+                <div class="stat-number">50+</div>
+                <div class="stat-label">Happy Clients</div>
+            </div>
+            <div class="stat-item animate-on-scroll">
+                <div class="stat-number">4+</div>
+                <div class="stat-label">Years Experience</div>
+            </div>
+            <div class="stat-item animate-on-scroll">
+                <div class="stat-number">100+</div>
+                <div class="stat-label">Songs Produced</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="section">
+        <div class="section-title">
+            <h2>Our Journey</h2>
+            <p>Milestones that shaped Williams Studios</p>
+        </div>
+        <div class="timeline">
+            <div class="timeline-item animate-on-scroll">
+                <div class="timeline-year">2019</div>
+                <div class="timeline-content">
+                    <h3>Foundation</h3>
+                    <p>Williams Studios was founded with a single recording booth and a vision to create exceptional audio experiences for local artists.</p>
+                </div>
+            </div>
+            <div class="timeline-item animate-on-scroll">
+                <div class="timeline-year">2020</div>
+                <div class="timeline-content">
+                    <h3>Expansion</h3>
+                    <p>Expanded services to include photography and videography, becoming a full-service media production studio.</p>
+                </div>
+            </div>
+            <div class="timeline-item animate-on-scroll">
+                <div class="timeline-year">2021</div>
+                <div class="timeline-content">
+                    <h3>Recognition</h3>
+                    <p>Received industry recognition for outstanding audio production and started serving international clients.</p>
+                </div>
+            </div>
+            <div class="timeline-item animate-on-scroll">
+                <div class="timeline-year">2022</div>
+                <div class="timeline-content">
+                    <h3>Electronics Division</h3>
+                    <p>Launched electronics sales division, providing professional audio equipment to creators and studios.</p>
+                </div>
+            </div>
+            <div class="timeline-item animate-on-scroll">
+                <div class="timeline-year">2023</div>
+                <div class="timeline-content">
+                    <h3>Digital Presence</h3>
+                    <p>Expanded digital footprint with successful YouTube channel and social media presence, reaching global audience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <section class="section" style="background: var(--light);">
+        <div class="section-title">
+            <h2>Our Mission & Vision</h2>
+            <p>The driving force behind everything we do</p>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem;">
+            <div class="service-card animate-on-scroll">
+                <div style="text-align: center; padding: 2rem;">
+                    <i class="fas fa-bullseye" style="font-size: 3rem; color: var(--secondary); margin-bottom: 1.5rem;"></i>
+                    <h3>Our Mission</h3>
+                    <p>To empower artists, photographers, and videographers by providing a collaborative environment that nurtures talent, fosters creativity, and delivers high-quality recordings and visuals that resonate with audiences.</p>
+                </div>
+            </div>
+            <div class="service-card animate-on-scroll">
+                <div style="text-align: center; padding: 2rem;">
+                    <i class="fas fa-eye" style="font-size: 3rem; color: var(--secondary); margin-bottom: 1.5rem;"></i>
+                    <h3>Our Vision</h3>
+                    <p>To be a leading creative platform inspiring and capturing authentic stories through innovative music and visual artistry, enriching cultural expression worldwide.</p>
+                </div>
+            </div>
+            <div class="service-card animate-on-scroll">
+                <div style="text-align: center; padding: 2rem;">
+                    <i class="fas fa-heart" style="font-size: 3rem; color: var(--secondary); margin-bottom: 1.5rem;"></i>
+                    <h3>Our Values</h3>
+                    <p>Creativity, authenticity, collaboration, excellence, integrity, innovation, and cultural diversity guide every project we undertake and every relationship we build.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section" style="background: var(--secondary); color: white; text-align: center;">
+        <div class="section-title">
+            <h2 style="color: white;">Ready to Work With Us?</h2>
+            <p style="color: white;">Let's create something amazing together</p>
+        </div>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+            <a href="contact.html" class="btn" style="background: white; color: var(--secondary);">Start Your Project</a>
+            <a href="services.html" class="btn btn-outline" style="border-color: white; color: white;">View Services</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h3>Williams Studios</h3>
+                <p>Creating exceptional audio and visual experiences that inspire and captivate audiences.</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/williams_on_the_beat?igsh=aGJueDVmMGozd2Ni"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/williams_on_the_beat?igsh=aGJueDVmMGozd2Ni"><i class="fab fa-instagram"></i></a>
+                    <a href="http://tiktok.com/@williams_on_the_beat"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://youtube.com/@officialwilliamsrecords?si=HROc-WbH38rg9fkC"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="team.html">Our Team</a></li>
+                    <li><a href="electronics.html">Electronics</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Services</h3>
+                <ul class="footer-links">
+                    <li><a href="services.html#music-recording">Music Recording</a></li>
+                    <li><a href="services.html#photography">Photography</a></li>
+                    <li><a href="services.html#video-clips">Video Production</a></li>
+                    <li><a href="services.html#wedding-filming">Wedding Filming</a></li>
+                    <li><a href="services.html#audio-mixing">Audio Mixing</a></li>
+                    <li><a href="services.html#live-events">Live Events</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Gichagi, Bridge International Academy</p>
+                <p><i class="fas fa-phone-alt"></i> +254 792-347-505</p>
+                <p><i class="fas fa-envelope"></i> danwilliams9930@gmail.com</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Williams Studios. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Booking Prompt Overlay -->
+    <div class="prompt-overlay" id="promptOverlay"></div>
+
+    <!-- Booking Prompt -->
+    <div class="booking-prompt" id="bookingPrompt">
+        <button class="close-prompt" id="closePrompt">&times;</button>
+        <div class="booking-prompt-header">
+            <i class="fas fa-calendar-check"></i>
+            <h3>Ready to Create Something Amazing?</h3>
+            <p>Book your session now and get 15% off your first project!</p>
+        </div>
+        
+        <div class="booking-features">
+            <div class="booking-feature">
+                <i class="fas fa-star"></i>
+                <span>Premium Quality</span>
+            </div>
+            <div class="booking-feature">
+                <i class="fas fa-clock"></i>
+                <span>Flexible Scheduling</span>
+            </div>
+            <div class="booking-feature">
+                <i class="fas fa-users"></i>
+                <span>Expert Team</span>
+            </div>
+            <div class="booking-feature">
+                <i class="fas fa-gift"></i>
+                <span>Special Offer</span>
+            </div>
+        </div>
+        
+        <div class="booking-prompt-btns">
+            <a href="contact.html" class="btn">
+                <i class="fas fa-calendar-alt"></i> Book Now
+            </a>
+            <button class="btn btn-outline" id="laterBtn">
+                <i class="fas fa-clock"></i> Remind Later
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
