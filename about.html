@@ -104,7 +104,46 @@
             text-align: center;
         }
         
+        /* About Story Section - Mobile Responsive */
+        .about-story {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .about-image {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .about-content h3 {
+            color: var(--secondary);
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+        }
+        
+        .about-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        /* Mobile Styles */
         @media (max-width: 768px) {
+            .about-story {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .about-image {
+                order: 1;
+            }
+            
+            .about-content {
+                order: 2;
+            }
+            
             .timeline::before {
                 left: 30px;
             }
@@ -181,19 +220,19 @@
             <h2>Our Story</h2>
             <p>From humble beginnings to becoming a leading creative studio</p>
         </div>
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+        <div class="about-story">
             <div class="animate-on-scroll">
-                <img src="will.jpg" alt="Our Studio" style="width: 100%; border-radius: 15px; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);">
+                <img src="will.jpg" alt="Our Studio" class="about-image">
             </div>
-            <div class="animate-on-scroll">
-                <h3 style="color: var(--secondary); margin-bottom: 1.5rem; font-size: 2rem;">Building Dreams Through Sound and Vision</h3>
-                <p style="margin-bottom: 1.5rem; line-height: 1.6;">
+            <div class="about-content animate-on-scroll">
+                <h3>Building Dreams Through Sound and Vision</h3>
+                <p>
                     Founded in 2019, Williams Studios began as a modest recording space with big dreams. What started as a family passion project has evolved into a comprehensive media production studio serving clients nationwide and internationally.
                 </p>
-                <p style="margin-bottom: 1.5rem; line-height: 1.6;">
+                <p>
                     Our team of creative professionals is dedicated to elevating musical artistry through superior production, strategic marketing, and promotional services. We mentor musicians, songwriters, producers, and engineers, prioritizing creative development and empowering artists to embrace authenticity.
                 </p>
-                <p style="margin-bottom: 2rem; line-height: 1.6;">
+                <p>
                     At Williams Studios, we cultivate enduring relationships and create an environment conducive to innovation, growth, and excellence, enabling artists to thrive and realize their full potential.
                 </p>
                 <a href="team.html" class="btn">Meet Our Team</a>
