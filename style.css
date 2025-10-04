@@ -868,7 +868,7 @@ footer {
         position: fixed;
         top: 80px;
         left: -100%;
-        background:#6b11cbdc;
+        background: #6b11cb;
         width: 100%;
         height: calc(100vh - 80px);
         flex-direction: column;
@@ -930,3 +930,4 @@ footer {
     }
 
 }
+
