@@ -147,12 +147,12 @@ const closePrompt = document.getElementById('closePrompt');
 const laterBtn = document.getElementById('laterBtn');
 
 if (bookingPrompt && promptOverlay && closePrompt && laterBtn) {
-    // Show booking prompt after 25 seconds
+    // Show booking prompt after 50 seconds
     setTimeout(() => {
         bookingPrompt.classList.add('show');
         promptOverlay.classList.add('show');
         document.body.style.overflow = 'hidden';
-    }, 30000);
+    }, 50000);
 
     // Close prompt when X is clicked
     closePrompt.addEventListener('click', () => {
@@ -288,4 +288,5 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('Williams Studios website loaded successfully');
     
     // Add any page-specific initializations here
+
 });
