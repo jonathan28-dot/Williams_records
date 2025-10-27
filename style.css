@@ -868,13 +868,14 @@ footer {
         position: fixed;
         top: 80px;
         left: -100%;
-        background: #6b11cb;
+        background: #ffffff !important; /* Force white background */
         width: 100%;
         height: calc(100vh - 80px);
         flex-direction: column;
         align-items: center;
         padding: 2rem 0;
         transition: var(--transition);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     }
 
     .nav-links.active {
@@ -884,29 +885,49 @@ footer {
     .nav-links li {
         margin: 1rem 0;
     }
-
-    .hero h1, .page-hero h1 {
-        font-size: 2.2rem;
+    
+    .nav-links a {
+        color: #333 !important; /* Force dark text for readability */
+        font-weight: 600;
+        font-size: 1.1rem;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        transition: var(--transition);
     }
-
-    .section {
-        padding: 3rem 1.5rem;
+    
+    .nav-links a:hover {
+        color: var(--secondary) !important;
+        background: rgba(106, 17, 203, 0.1);
     }
-
-    .section-title h2 {
-        font-size: 2rem;
+    
+    .nav-links a::after {
+        display: none; /* Remove underline effect for mobile */
     }
-
-    .services-grid, .electronics-grid, .team-container, .gallery-grid {
-        grid-template-columns: 1fr;
+    
+    .team-container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
     }
-
+    
+    .testimonial-slide {
+        padding: 2rem 1.5rem;
+        margin: 0 0.5rem;
+    }
+    
     .booking-features {
         grid-template-columns: 1fr;
     }
-
+    
     .booking-prompt-btns {
         flex-direction: column;
+    }
+    
+    .member-img {
+        height: 250px;
+    }
+    
+    .client-text {
+        font-size: 1rem;
     }
 }
 
@@ -930,4 +951,5 @@ footer {
     }
 
 }
+
 
