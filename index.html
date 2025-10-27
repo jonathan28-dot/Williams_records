@@ -1996,7 +1996,7 @@
             <div class="contact-form animate-on-scroll">
                 <form action="https://formspree.io/f/xgvzragg" method="POST">
                     <div class="form-group">
-                        <label for="name">Your Name</label>
+                        <label for="name">Your Name *</label>
                         <input type="text" id="name" name="name" placeholder="Enter your full name" required>
                     </div>
                     <div class="form-group">
@@ -2004,11 +2004,11 @@
                         <input type="email" id="email" name="email" placeholder="Enter a valid Email Address" required>
                     </div>
                     <div class="form-group">
-                        <label for="phone">Phone Number</label>
+                        <label for="phone">Phone Number *</label>
                         <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
                     </div>
-                    <div class="form-group">
-                        <label for="service">Service Interested In</label>
+                    <div class="form-group" required>
+                        <label for="service">Service Interested In *</label>
                         <select id="service" name="service" required>
                             <option value="">Select a service</option>
                             <option value="music-recording">Music Recording</option>
@@ -2021,7 +2021,7 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="message">Your Message</label>
+                        <label for="message">Your Message *</label>
                         <textarea id="message" name="message" required></textarea>
                     </div>
                     <button type="submit" class="btn">Send Message</button>
@@ -2074,7 +2074,12 @@
             </div>
         </div>
         <div class="copyright">
-            <p>&copy; 2023 Williams Studios. All Rights Reserved.</p>
+            <p>
+              &copy; 2023 <a href="https://jonathan28-dot.github.io/Jonathan_portfolio/" target="_blank" style="color: #0d6efd; text-decoration: none; font-weight: 500;">
+                Williams Studios
+              </a>. All Rights Reserved. <br>
+              <small>Developed by <a href="https://jonathan28-dot.github.io/Jonathan_portfolio/" target="_blank" style="color: #0d6efd; text-decoration: none;">Jonathan Bosimwenda</a></small>
+            </p>
         </div>
     </footer>
 
@@ -2307,12 +2312,12 @@
         const closePrompt = document.getElementById('closePrompt');
         const laterBtn = document.getElementById('laterBtn');
 
-        // Show booking prompt after 15 seconds
+        // Show booking prompt after 50 seconds
         setTimeout(() => {
             bookingPrompt.classList.add('show');
             promptOverlay.classList.add('show');
             document.body.style.overflow = 'hidden';
-        }, 30000);
+        }, 50000);
 
         // Close prompt when X is clicked
         closePrompt.addEventListener('click', () => {
